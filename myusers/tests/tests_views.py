@@ -104,7 +104,8 @@ class TestRetrieveUserAPIView(APITestCase):
         jwt_fetch_data = {"email": email, "password": password}
         token_obtain_url = reverse("token_obtain_pair")
         token_refresh_url = reverse("token_refresh")
-        response = self.client.post(token_obtain_url, jwt_fetch_data, format="json")
+        response = self.client.post(
+            token_obtain_url, jwt_fetch_data, format="json")
         token = response.data["access"]
 
         self.client.credentials(HTTP_AUTHORIZATION=f"Bearer {token}")
@@ -126,7 +127,8 @@ class TestRetrieveUserAPIView(APITestCase):
         jwt_fetch_data = {"email": email, "password": password}
         token_obtain_url = reverse("token_obtain_pair")
         token_refresh_url = reverse("token_refresh")
-        response = self.client.post(token_obtain_url, jwt_fetch_data, format="json")
+        response = self.client.post(
+            token_obtain_url, jwt_fetch_data, format="json")
         token = response.data["access"]
 
         self.client.credentials(HTTP_AUTHORIZATION=f"Bearer {token}")
