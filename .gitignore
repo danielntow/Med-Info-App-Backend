@@ -134,3 +134,5 @@ media/ # Media files directory
 #
 requirements.in
 requirements.txt
+*.requirements.in
+*.requirements.txt
