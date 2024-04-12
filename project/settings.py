@@ -114,21 +114,6 @@ DATABASES = {
 }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'defaultdb',
-#         'USER': 'avnadmin',
-#         'PASSWORD': 'AVNS_BfxEFwjyzUjSFk2LG-J',
-#         'HOST': 'pg-medinfo-dsappapp-med.a.aivencloud.com',
-#         'PORT': 15389,
-#         'OPTIONS': {
-#             'sslmode': 'require',
-#         },
-#     }
-# }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
