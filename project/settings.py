@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "django_extensions",
     "myusers.apps.MyusersConfig",
+    "medinfo.apps.MedinfoConfig",
     "rest_framework",
     "corsheaders",
     "rest_framework_simplejwt",
@@ -111,6 +112,21 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'defaultdb',
+#         'USER': 'avnadmin',
+#         'PASSWORD': 'AVNS_BfxEFwjyzUjSFk2LG-J',
+#         'HOST': 'pg-medinfo-dsappapp-med.a.aivencloud.com',
+#         'PORT': 15389,
+#         'OPTIONS': {
+#             'sslmode': 'require',
+#         },
+#     }
+# }
 
 
 # Password validation

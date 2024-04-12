@@ -57,7 +57,7 @@ local_settings.py  # Local settings file
 db.sqlite3         # SQLite database file
 db.sqlite3-journal # SQLite journal file
 staticfiles/       # Static files directory
-settings.py        # Django settings file
+# settings.py        # Django settings file
 
 # Flask stuff:
 instance/        # Flask instance directory
@@ -128,5 +128,9 @@ media/ # Media files directory
 # Other files
 .DS_Store   # macOS system file
 *.pot       # Compiled message catalog template files
-*.egg-info  # Egg metadata files
+*.egg-info  # Egg metauserdata files
 .env.sample # Sample environment variable file
+
+#
+requirements.in
+requirements.txt

@@ -60,6 +60,7 @@ urlpatterns = [
     path("api/token/verify/", TokenVerifyView.as_view(), name="token_verify"),
     # path('api /users/', include('users.urls')),
     path("api/users/", include("myusers.urls", namespace="myusers")),
+    path("api/drugs/", include("medinfo.urls", namespace="medinfo")),
 
     path("auth/", include("djoser.urls")),
     path("auth/token/", include("djoser.urls.authtoken")),
