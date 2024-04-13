@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "django_extensions",
     "myusers.apps.MyusersConfig",
+    "medinfo.apps.MedinfoConfig",
     "rest_framework",
     "corsheaders",
     "rest_framework_simplejwt",
