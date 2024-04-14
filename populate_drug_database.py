@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # populate_drug_database.py
 
 
