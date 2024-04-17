@@ -18,13 +18,13 @@ router.register(r'drug-name', DrugViewSet)
 
 
 router = DefaultRouter()
-router.register(r'drugs', views.DrugsViewSet)
-router.register(r'dosages', views.DosagesViewSet)
+# router.register(r'drugs', views.DrugsViewSet)
+# router.register(r'dosages', views.DosagesViewSet)
 # Register other viewsets for related models here
 
 app_name = "medinfo"
 urlpatterns = [
-    path('', DrugListView.as_view(), name='drug-list'),
-    path('<int:pk>/', DrugDetailView.as_view(), name='drug-detail'),
+    # path('', DrugListView.as_view(), name='drug-list'),
+    path('<slug:name>/', DrugDetailView.as_view(), name='drug-detail'),
     path('', include(router.urls)),
 ]
