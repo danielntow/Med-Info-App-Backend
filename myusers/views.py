@@ -1,4 +1,5 @@
-from .models import *
+from .models import NewUser
+
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.decorators import api_view
 from rest_framework.generics import *

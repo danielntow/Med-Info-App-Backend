@@ -120,6 +120,30 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": 'django.db.backends.mysql',
+#         "NAME": os.environ.get("DATABASE_NAME"),
+#         "USER": os.environ.get("DATABASE_USERNAME"),
+#         "PASSWORD": os.environ.get("DATABASE_PASSWORD"),
+#         "HOST": os.environ.get("DATABASE_HOST"),
+#         "PORT": os.environ.get("DATABASE_PORT"),
+#     }
+# }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "postgres",  # Maintenance database
+#         "USER": "postgres",
+#         # Ensure this is set in your environment
+#         "PASSWORD": os.environ.get("DATABASE_PASSWORD"),
+#         "HOST": "roundhouse.proxy.rlwy.net",
+#         "PORT": 20512,
+#     }
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -156,8 +180,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
@@ -184,6 +210,10 @@ REST_FRAMEWORK = {
     # "PAGE_SIZE": 100,
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
 }
+
+COMPRESS_ROOT = BASE_DIR / "static"
+
+COMPRESS_ENABLED = True
 
 
 SIMPLE_JWT = {
@@ -214,10 +244,6 @@ SIMPLE_JWT = {
     # rotate - keeps login after the expiratuon of refresh-token iof user persist
 }
 
-
-COMPRESS_ROOT = BASE_DIR / "static"
-
-COMPRESS_ENABLED = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
