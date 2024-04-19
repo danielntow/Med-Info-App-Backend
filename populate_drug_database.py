@@ -29,7 +29,7 @@ def populate_database():
         drug=aspirin, description="Generally considered safe during pregnancy when used in low doses, but should be avoided in the last trimester.")
     Contraindication.objects.create(
         drug=aspirin, description="Should not be used in individuals with bleeding disorders or gastric ulcers.")
-    print('u just printed me')
+    print('u just printed meu')
 
     # Drug 2: Paracetamol
     paracetamol = Drug.objects.create(name="Paracetamol")
