@@ -34,7 +34,7 @@ DEBUG = True
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://med-info-app.up.railway.app/",
+    "https://med-info-app.up.railway.app",
 ]
 
 
