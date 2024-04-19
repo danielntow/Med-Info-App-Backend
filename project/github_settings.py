@@ -79,6 +79,7 @@ AUTH_USER_MODEL = "myusers.NewUser"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -86,6 +87,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'project.urls'
 
@@ -123,6 +125,9 @@ DATABASES = {
         "PORT": 20512,
     }
 }
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # DATABASES = {
 #     'default': dj_database_url.config(default='postgresql://postgres:eoELritAuqMqHbXsCTURlJthHONzvhqg@roundhouse.proxy.rlwy.net:20512/railway')
@@ -167,7 +172,7 @@ STATIC_URL = 'static/'
 
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, "static")
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")

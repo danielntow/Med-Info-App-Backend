@@ -27,13 +27,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%+l7wo04u%(rqj!&ek&@u20vie7!gcbl^wot_mk=h#u9fme)&3'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://med-info-app.up.railway.app/",
 ]
 
 
@@ -44,8 +45,8 @@ ALLOWED_HOSTS = [
     "http://localhost:5173",
     "http://127.0.0.1:8000",
     "http://localhost:5173",
-    "localhost",
-    '127.0.0.1'
+    "https://med-info-app.up.railway.app",
+
 ]
 
 
@@ -112,12 +113,24 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql_psycopg2",
+#         "NAME": os.environ.get("DATABASE_NAME"),
+#         "USER": "postgres",
+#         "PASSWORD": os.environ.get("DATABASE_PASSWORD"),
+#         "HOST": os.environ.get("DATABASE_HOST"),
+#         "PORT": 20512,
+#     }
+# }
 
 
 # DATABASES = {
@@ -130,6 +143,21 @@ DATABASES = {
 #         "PORT": os.environ.get("DATABASE_PORT"),
 #     }
 # }
+
+
+# settings.py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': os.environ.get('MY_PASSWORD'),
+        'HOST': 'viaduct.proxy.rlwy.net',  # or '127.0.0.1' for local development
+        'PORT': '16280',  # MySQL default port
+    }
+}
+
 
 # DATABASES = {
 #     "default": {
