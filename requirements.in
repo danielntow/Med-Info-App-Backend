@@ -44,12 +44,12 @@ Pillow
 platformdirs
 pluggy
 pprintpp
-psycopg2-binary
+psyco?pg2-binary
 pycparser
 Pygments
 PyJWT
-psycopg2
-# pyscopg2
+?psycopg2
+
 pytest
 pytest-black
 pytest-clarity

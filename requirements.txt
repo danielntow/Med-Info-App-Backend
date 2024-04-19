@@ -70,7 +70,7 @@ PyYAML==6.0.1
 requests-oauthlib==2.0.0
 rest-framework-simplejwt==0.0.2
 rich==13.7.1
-setuptools==69.2.0
+setuptools
 simplejson==3.19.2
 six==1.16.0
 social-auth-app-django==5.4.0
