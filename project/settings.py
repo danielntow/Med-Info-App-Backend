@@ -30,12 +30,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 CORS_ALLOWED_ORIGINS = [
+    "https://med-info-apps.up.railway.app",
+    "https://6623acaa1dda68bf30c2c421--gregarious-tartufo-444727.netlify.app"
     "http://localhost:5173",
     "https://med-info-app.up.railway.app",
-    "https://med-info-apps.up.railway.app",
 ]
 
 
