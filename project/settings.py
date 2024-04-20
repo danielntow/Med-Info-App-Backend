@@ -35,6 +35,7 @@ DEBUG = False
 CORS_ALLOWED_ORIGINS = [
     "https://med-info-apps.up.railway.app",
     "https://6623acaa1dda68bf30c2c421--gregarious-tartufo-444727.netlify.app",
+    "https://jocular-kashata-e2b6a1.netlify.app",
     "https://main--gregarious-tartufo-444727.netlify.app",
     "http://localhost:5173",
     "https://med-info-app.up.railway.app",
