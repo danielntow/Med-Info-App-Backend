@@ -39,7 +39,7 @@ mdurl==0.1.2
 mixer==7.2.2
 model-bakery==1.17.0
 mypy-extensions==1.0.0
-mysqlclient==2.2.4
+# mysqlclient
 oauthlib==3.2.2
 openapi-codec==1.3.2
 packaging==24.0
