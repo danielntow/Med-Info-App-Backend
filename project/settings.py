@@ -38,18 +38,19 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
-ALLOWED_HOSTS = [
-    "http://localhost:8000",
-    "http://localhost:5001",
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "http://127.0.0.1:8000",
-    "http://localhost:5173",
-    "https://med-info-app.up.railway.app",
-    '127.0.0.1',
-    'localhost'
-]
+# ALLOWED_HOSTS = [
+#     "http://localhost:8000",
+#     "http://localhost:5001",
+#     "http://localhost:3000",
+#     "http://localhost:5173",
+#     "http://127.0.0.1:8000",
+#     "http://localhost:5173",
+#     "https://med-info-app.up.railway.app",
+#     '127.0.0.1',
+#     'localhost'
+# ]
 
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -114,12 +115,12 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # DATABASES = {
@@ -148,16 +149,30 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # settings.py
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': os.environ.get('MY_PASSWORD'),
-        'HOST': 'viaduct.proxy.rlwy.net',  # or '127.0.0.1' for local development
-        'PORT': '16280',  # MySQL default port
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'railway',
+#         'USER': 'root',
+#         'PASSWORD': os.environ.get('MY_PASSWORD'),
+#         'HOST': 'viaduct.proxy.rlwy.net',  # or '127.0.0.1' for local development
+#         'PORT': '16280',  # MySQL default port
+#     }
+# }
+
+# settings.py
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'KNtXCBPvNJyTvnHdeSirtGAxJNVtuuxY',
+#         # or the IP address or hostname of your PostgreSQL server
+#         'HOST': 'roundhouse.proxy.rlwy.net',
+#         'PORT': '5432',       # default PostgreSQL port
+#     }
+# }
 
 
 # DATABASES = {
