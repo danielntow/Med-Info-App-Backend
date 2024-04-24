@@ -14,93 +14,121 @@ django.setup()
 def populate_database():
     drugs = [
         {
-            'name': 'Amoxicillin Clavulanic Acid',
-            'dosage': ('Dosage regimen varies based on the specific indication and severity of the infection. '
-                       'Typically administered orally at doses ranging from 250 mg to 875 mg of amoxicillin every 8-12 hours, '
-                       'depending on the formulation and severity of the infection. The clavulanic acid component is typically '
-                       'administered in a fixed ratio with amoxicillin, such as 125 mg or 250 mg.\n'
-                       'Pediatric dose is weight-based: consult healthcare provider for appropriate dosing.'),
-            'indication': ('Treatment of bacterial infections such as respiratory tract infections, '
-                           'urinary tract infections, and skin and soft tissue infections.'),
-            'warning': ('May cause gastrointestinal disturbances, allergic reactions, or superinfections. '
-                        'Use caution in individuals with a history of penicillin allergy or renal impairment.'),
-            'administration': ('Administered orally with or without food. '
-                               'Tablets or suspension should be taken with a full glass of water.'),
-            'pregnancy_lactation': ('Limited data is available regarding the safety of amoxicillin clavulanic acid during pregnancy and lactation. '
-                                    'Consult healthcare provider before use.'),
-            'contraindication': 'Hypersensitivity to amoxicillin, clavulanic acid, or any penicillin antibiotic.',
-            'adverse_effects': ('Common side effects include diarrhea, nausea, vomiting, or rash. '
-                                'Severe allergic reactions such as anaphylaxis may occur in rare cases.')
-        },
-        {
-            'name': 'Augmentin',
-            'dosage': ('Dosage regimen varies based on the specific indication and severity of the infection. '
-                       'Typically administered orally at doses ranging from 250 mg to 875 mg of amoxicillin every 8-12 hours, '
-                       'depending on the formulation and severity of the infection. The clavulanic acid component is typically '
-                       'administered in a fixed ratio with amoxicillin, such as 125 mg or 250 mg.\n'
-                       'Pediatric dose is weight-based: consult healthcare provider for appropriate dosing.'),
-            'indication': ('Treatment of bacterial infections such as respiratory tract infections, '
-                           'urinary tract infections, and skin and soft tissue infections.'),
-            'warning': ('May cause gastrointestinal disturbances, allergic reactions, or superinfections. '
-                        'Use caution in individuals with a history of penicillin allergy or renal impairment.'),
-            'administration': ('Administered orally with or without food. '
-                               'Tablets or suspension should be taken with a full glass of water.'),
-            'pregnancy_lactation': ('Limited data is available regarding the safety of Augmentin during pregnancy and lactation. '
-                                    'Consult healthcare provider before use.'),
-            'contraindication': 'Hypersensitivity to amoxicillin, clavulanic acid, or any penicillin antibiotic.',
-            'adverse_effects': ('Common side effects include diarrhea, nausea, vomiting, or rash. '
-                                'Severe allergic reactions such as anaphylaxis may occur in rare cases.')
-        },
-        {
-            'name': 'Methyldopa',
-            'dosage': ('Initial dose: 250 mg orally 2-3 times daily. '
-                       'May increase gradually based on response and tolerance, up to a maximum of 2 g per day.\n'
-                       'Pediatric dose is weight-based: consult healthcare provider for appropriate dosing.'),
-            'indication': ('Treatment of hypertension, particularly during pregnancy.'),
-            'warning': ('May cause orthostatic hypotension, drowsiness, or hemolytic anemia. '
-                        'Use caution in individuals with a history of depression or hepatic impairment.'),
-            'administration': ('Administered orally with or without food. '
+            'name': 'Coartem',
+            'dosage': ('Dosage regimen varies based on the weight of the patient and the specific indication for treatment. '
+                       'The recommended total dose of artemether and lumefantrine is administered over 3 days.\n'
+                       'For patients weighing 5 kg to less than 15 kg: '
+                       'One tablet of Coartem (20 mg artemether/120 mg lumefantrine) as a single dose twice daily for 3 days.\n'
+                       'For patients weighing 15 kg to less than 25 kg: '
+                       'Two tablets of Coartem (20 mg artemether/120 mg lumefantrine) as a single dose twice daily for 3 days.\n'
+                       'For patients weighing 25 kg to less than 35 kg: '
+                       'Three tablets of Coartem (20 mg artemether/120 mg lumefantrine) as a single dose twice daily for 3 days.\n'
+                       'For patients weighing 35 kg and above: '
+                       'Four tablets of Coartem (20 mg artemether/120 mg lumefantrine) as a single dose twice daily for 3 days.'),
+            'indication': ('Treatment of uncomplicated malaria caused by Plasmodium falciparum, including multidrug-resistant strains, '
+                           'and mixed infections with P. falciparum and Plasmodium vivax.'),
+            'warning': ('May cause gastrointestinal disturbances, dizziness, or headache. '
+                        'Use caution in individuals with a history of cardiac disorders or hepatic impairment.'),
+            'administration': ('Administered orally with food or milk to enhance absorption. '
                                'Tablets should be swallowed whole with a full glass of water.'),
-            'pregnancy_lactation': ('Limited data is available regarding the safety of methyldopa during pregnancy and lactation. '
+            'pregnancy_lactation': ('Limited data is available regarding the safety of Coartem during pregnancy and lactation. '
                                     'Consult healthcare provider before use.'),
-            'contraindication': ('Hypersensitivity to methyldopa or any component of the formulation. '
-                                 'Also contraindicated in patients with active liver disease or history of liver disorders.'),
-            'adverse_effects': ('Common side effects include dizziness, drowsiness, headache, or gastrointestinal disturbances. '
-                                'Rare side effects may include liver toxicity or hemolytic anemia.')
-        },
-        {
-            'name': 'Clindamycin',
-            'dosage': ('Dosage regimen varies based on the specific indication and severity of the infection. '
-                       'Typically administered orally at doses ranging from 150 mg to 450 mg every 6-8 hours.\n'
-                       'For severe infections, intravenous administration may be necessary.'),
-            'indication': ('Treatment of bacterial infections such as skin and soft tissue infections, '
-                           'anaerobic infections, and pelvic inflammatory disease.'),
-            'warning': ('May cause gastrointestinal disturbances, allergic reactions, or pseudomembranous colitis. '
-                        'Use caution in individuals with a history of colitis or hepatic impairment.'),
-            'administration': ('Administered orally with or without food. '
-                               'Tablets or capsules should be swallowed whole with a full glass of water.'),
-            'pregnancy_lactation': ('Limited data is available regarding the safety of clindamycin during pregnancy and lactation. '
-                                    'Consult healthcare provider before use.'),
-            'contraindication': 'Hypersensitivity to clindamycin or any lincomycin antibiotic.',
-            'adverse_effects': ('Common side effects include diarrhea, nausea, vomiting, or rash. '
-                                'Severe allergic reactions may occur in rare cases, along with pseudomembranous colitis.')
-        },
-        {
-            'name': 'Phlebodia',
-            'dosage': ('Recommended dose is typically 600 mg orally once daily, preferably in the morning before meals.'),
-            'indication': ('Treatment of chronic venous insufficiency and related symptoms such as leg swelling, pain, and heaviness.'),
-            'warning': ('May cause gastrointestinal disturbances or headache. '
-                        'Use caution in individuals with a history of cardiovascular disorders or liver impairment.'),
-            'administration': ('Administered orally, preferably in the morning before meals. '
-                               'Tablets should be swallowed whole with a full glass of water.'),
-            'pregnancy_lactation': ('Limited data is available regarding the safety of Phlebodia during pregnancy and lactation. '
-                                    'Consult healthcare provider before use.'),
-            'contraindication': ('Hypersensitivity to diosmin or any component of the formulation. '
-                                 'Also contraindicated in patients with severe liver disease or history of thromboembolic disorders.'),
-            'adverse_effects': ('Common side effects include gastrointestinal disturbances or headache. '
-                                'Rare side effects may include allergic reactions or dizziness.')
+            'contraindication': ('Hypersensitivity to artemether, lumefantrine, or any component of the formulation. '
+                                 'Also contraindicated in patients with severe malaria, severe hepatic impairment, or severe renal impairment.'),
+            'adverse_effects': ('Common side effects include gastrointestinal disturbances, dizziness, headache, or fatigue. '
+                                'Rare side effects may include cardiac arrhythmias or hypersensitivity reactions.')
         }
+
     ]
+    # drugs = [
+    #     {
+    #         'name': 'Amoxicillin Clavulanic Acid',
+    #         'dosage': ('Dosage regimen varies based on the specific indication and severity of the infection. '
+    #                    'Typically administered orally at doses ranging from 250 mg to 875 mg of amoxicillin every 8-12 hours, '
+    #                    'depending on the formulation and severity of the infection. The clavulanic acid component is typically '
+    #                    'administered in a fixed ratio with amoxicillin, such as 125 mg or 250 mg.\n'
+    #                    'Pediatric dose is weight-based: consult healthcare provider for appropriate dosing.'),
+    #         'indication': ('Treatment of bacterial infections such as respiratory tract infections, '
+    #                        'urinary tract infections, and skin and soft tissue infections.'),
+    #         'warning': ('May cause gastrointestinal disturbances, allergic reactions, or superinfections. '
+    #                     'Use caution in individuals with a history of penicillin allergy or renal impairment.'),
+    #         'administration': ('Administered orally with or without food. '
+    #                            'Tablets or suspension should be taken with a full glass of water.'),
+    #         'pregnancy_lactation': ('Limited data is available regarding the safety of amoxicillin clavulanic acid during pregnancy and lactation. '
+    #                                 'Consult healthcare provider before use.'),
+    #         'contraindication': 'Hypersensitivity to amoxicillin, clavulanic acid, or any penicillin antibiotic.',
+    #         'adverse_effects': ('Common side effects include diarrhea, nausea, vomiting, or rash. '
+    #                             'Severe allergic reactions such as anaphylaxis may occur in rare cases.')
+    #     },
+    #     {
+    #         'name': 'Augmentin',
+    #         'dosage': ('Dosage regimen varies based on the specific indication and severity of the infection. '
+    #                    'Typically administered orally at doses ranging from 250 mg to 875 mg of amoxicillin every 8-12 hours, '
+    #                    'depending on the formulation and severity of the infection. The clavulanic acid component is typically '
+    #                    'administered in a fixed ratio with amoxicillin, such as 125 mg or 250 mg.\n'
+    #                    'Pediatric dose is weight-based: consult healthcare provider for appropriate dosing.'),
+    #         'indication': ('Treatment of bacterial infections such as respiratory tract infections, '
+    #                        'urinary tract infections, and skin and soft tissue infections.'),
+    #         'warning': ('May cause gastrointestinal disturbances, allergic reactions, or superinfections. '
+    #                     'Use caution in individuals with a history of penicillin allergy or renal impairment.'),
+    #         'administration': ('Administered orally with or without food. '
+    #                            'Tablets or suspension should be taken with a full glass of water.'),
+    #         'pregnancy_lactation': ('Limited data is available regarding the safety of Augmentin during pregnancy and lactation. '
+    #                                 'Consult healthcare provider before use.'),
+    #         'contraindication': 'Hypersensitivity to amoxicillin, clavulanic acid, or any penicillin antibiotic.',
+    #         'adverse_effects': ('Common side effects include diarrhea, nausea, vomiting, or rash. '
+    #                             'Severe allergic reactions such as anaphylaxis may occur in rare cases.')
+    #     },
+    #     {
+    #         'name': 'Methyldopa',
+    #         'dosage': ('Initial dose: 250 mg orally 2-3 times daily. '
+    #                    'May increase gradually based on response and tolerance, up to a maximum of 2 g per day.\n'
+    #                    'Pediatric dose is weight-based: consult healthcare provider for appropriate dosing.'),
+    #         'indication': ('Treatment of hypertension, particularly during pregnancy.'),
+    #         'warning': ('May cause orthostatic hypotension, drowsiness, or hemolytic anemia. '
+    #                     'Use caution in individuals with a history of depression or hepatic impairment.'),
+    #         'administration': ('Administered orally with or without food. '
+    #                            'Tablets should be swallowed whole with a full glass of water.'),
+    #         'pregnancy_lactation': ('Limited data is available regarding the safety of methyldopa during pregnancy and lactation. '
+    #                                 'Consult healthcare provider before use.'),
+    #         'contraindication': ('Hypersensitivity to methyldopa or any component of the formulation. '
+    #                              'Also contraindicated in patients with active liver disease or history of liver disorders.'),
+    #         'adverse_effects': ('Common side effects include dizziness, drowsiness, headache, or gastrointestinal disturbances. '
+    #                             'Rare side effects may include liver toxicity or hemolytic anemia.')
+    #     },
+    #     {
+    #         'name': 'Clindamycin',
+    #         'dosage': ('Dosage regimen varies based on the specific indication and severity of the infection. '
+    #                    'Typically administered orally at doses ranging from 150 mg to 450 mg every 6-8 hours.\n'
+    #                    'For severe infections, intravenous administration may be necessary.'),
+    #         'indication': ('Treatment of bacterial infections such as skin and soft tissue infections, '
+    #                        'anaerobic infections, and pelvic inflammatory disease.'),
+    #         'warning': ('May cause gastrointestinal disturbances, allergic reactions, or pseudomembranous colitis. '
+    #                     'Use caution in individuals with a history of colitis or hepatic impairment.'),
+    #         'administration': ('Administered orally with or without food. '
+    #                            'Tablets or capsules should be swallowed whole with a full glass of water.'),
+    #         'pregnancy_lactation': ('Limited data is available regarding the safety of clindamycin during pregnancy and lactation. '
+    #                                 'Consult healthcare provider before use.'),
+    #         'contraindication': 'Hypersensitivity to clindamycin or any lincomycin antibiotic.',
+    #         'adverse_effects': ('Common side effects include diarrhea, nausea, vomiting, or rash. '
+    #                             'Severe allergic reactions may occur in rare cases, along with pseudomembranous colitis.')
+    #     },
+    #     {
+    #         'name': 'Phlebodia',
+    #         'dosage': ('Recommended dose is typically 600 mg orally once daily, preferably in the morning before meals.'),
+    #         'indication': ('Treatment of chronic venous insufficiency and related symptoms such as leg swelling, pain, and heaviness.'),
+    #         'warning': ('May cause gastrointestinal disturbances or headache. '
+    #                     'Use caution in individuals with a history of cardiovascular disorders or liver impairment.'),
+    #         'administration': ('Administered orally, preferably in the morning before meals. '
+    #                            'Tablets should be swallowed whole with a full glass of water.'),
+    #         'pregnancy_lactation': ('Limited data is available regarding the safety of Phlebodia during pregnancy and lactation. '
+    #                                 'Consult healthcare provider before use.'),
+    #         'contraindication': ('Hypersensitivity to diosmin or any component of the formulation. '
+    #                              'Also contraindicated in patients with severe liver disease or history of thromboembolic disorders.'),
+    #         'adverse_effects': ('Common side effects include gastrointestinal disturbances or headache. '
+    #                             'Rare side effects may include allergic reactions or dizziness.')
+    #     }
+    # ]
 
     # drugs = [
     # {
