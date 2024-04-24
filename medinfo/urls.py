@@ -24,7 +24,7 @@ router = DefaultRouter()
 
 app_name = "medinfo"
 urlpatterns = [
-    # path('', DrugListView.as_view(), name='drug-list'),
+    path('list', DrugListView.as_view(), name='drug-list'),
     path('<slug:name>/', DrugDetailView.as_view(), name='drug-detail'),
     path('', include(router.urls)),
 ]
